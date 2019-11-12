@@ -69,6 +69,53 @@
                 position:relative;
                 }
 
+            .container-1 {
+                max-width: 800px;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin: 0 auto;
+                display: flex;
+                position:relative;
+                flex-direction: column;
+                }
+            
+            .timeline {
+                border-left: #999;
+                border-left-width: 4px;
+                border-left-style: solid;
+            }
+
+            .event {
+                padding-left:5px;
+                margin-left:25px;
+                border-bottom: #999;
+                border-bottom-width: 1px;
+                border-bottom-style: dashed;
+            }
+
+            .pointer{
+                -webkit-box-shadow: 0 0 0 4px #999;
+                box-shadow: 0 0 0 4px #999;
+                background: #333;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                height: 11px;
+                width: 11px;
+            }
+
+            .date {
+                color:rgb(71, 132, 247);
+                padding-right:20px;
+                border-right: #999;
+                border-right-width: 4px;
+                border-right-style: solid;
+            }
+
+            .company {
+                color: rgb(71, 132, 247);
+                padding-left:15px;
+            }
+
             .col-1 {
                 position: relative;
                 padding-right: 15px;
@@ -144,7 +191,9 @@
                 display: none;
             }
             @media screen and (max-width: 660px) {
-                .topnav a:not(:first-child) {display: none;}
+                .topnav a:not(:first-child) {
+                    display: none;
+                }
                 .topnav a.icon {
                     float: right;
                     display: block;
@@ -156,7 +205,6 @@
                     position: fixed;
                     top:0;
                     z-index:1;
-                
                 }
                 .topnav.responsive .icon {
                     position: absolute;
@@ -215,43 +263,75 @@
 
 
         <section class="bg-light">
-            <div class="container">
+            <div class="container-1">
                 <h1>Experience</h1>
-                <p>
-                    Business Development Specialist
-                    GiFood.id | March 2019 - October 2019
+                <div class="timeline">
+                    <div class="event">
+                        <h3>Business Development Specialist</h3>
+                        <h4>
+                            <span class="date">March 2019 - October 2019</span>
+                            <span class="company"> GiFood.id</span>
 
-                    GiFood provides an online platform to connect people who have excess foods and people who need them. I am responsible for market analysis using Artificiial Intelligence, investor engagement, and building a social business plan.
-                </p>
+                        </h4>
+                        <p>          
+                            GiFood provides an online platform to connect people who have excess foods and people who need them. I am responsible for market analysis using Artificiial Intelligence, investor engagement, and building a social business plan.
+                        </p>
+                    </div>
+                    <div class="event">
+                        <h3>Co-Founder and Chief Technology Officer</h3>
+                        <h4>
+                            <span class="date">April 2019 - October 2019</span>
+                            <span class="company"> Hematobot.io</span>
 
-                <p>
-                    Co-Founder and Chief Technology Officer
-                    Hematobot.io | April 2019 - October 2019
+                        </h4>
+                        <p>          
+                            Hematobot is a platform for analyzing white blood cell cancer using Deep Learning method. I am responsible for designing Deep Learning model and leading a business pitch for startup competition and investor engagement.
+                        </p>
+                    </div>
 
-                    Hematobot is a platform for analyzing white blood cell cancer using Deep Learning method. I am responsible for designing Deep Learning model and leading a business pitch for startup competition and investor engagement.
-                </p>
+                    <div class="event">
+                        <h3>Research Assistant</h3>
+                        <h4>
+                            <span class="date">July 2019 - October 2019</span>
+                            <span class="company"> Universitas Gadjah Mada</span>
 
-                <p>
-                    Research Assistant
-                    Universitas Gadjah Mada | July 2019 - October 2019
-
-                    Our research entitled "Modified Microscope for White Blood Cell Analysis using Machine Learning" got funded by "Penelitian Dasar Unggulan Perguruan Tinggi" program. I am responsible for building a research plan, managing research financial and development report, co-supervising undergraduate thesis, and managing research to achieve journal publication.
-                </p>
+                        </h4>
+                        <p>          
+                            Our research entitled "Modified Microscope for White Blood Cell Analysis using Machine Learning" got funded by "Penelitian Dasar Unggulan Perguruan Tinggi" program. I am responsible for building a research plan, managing research financial and development report, co-supervising undergraduate thesis, and managing research to achieve journal publication.
+                        </p>
+                    </div>                    
+                </div>
             </div>
         </section>
         
         <section class="bg-dark">
-                <div class="container">
+                <div class="container-1">
                     <h1>Education</h1>
-                    <p>
-                        Undergraduate of Engineering Physics, Specialize in Artificial Intelligence
-
-                        Faculty of Engineering
-                        Universitas Gadjah Mada | Aug 2015 - July 2019
-
-                        GPA 3.64 out of 4.00
-                        Research title "Acute Lymphoblastic Leukemia L1 classification with Capsule Network - Dynamic Routing Approach"
-                    </p>
+                    <div class="timeline">
+                        <div class="event">
+                            <h3>Undergraduate of Engineering Physics, Specialize in Artificial Intelligence</h3>
+                            <h4>
+                                <span class="date">August 2015 - July 2019</span>
+                                <span class="company"> Universitas Gadjah Mada</span>
+    
+                            </h4>
+                            <p>          
+                                GPA 3.64 out of 4.00 <br/>
+                                Research title "Acute Lymphoblastic Leukemia L1 classification with Capsule Network - Dynamic Routing Approach"
+                            </p>
+                        </div>
+                        <div class="event">
+                            <h3>Artificial Intelligence - Digital Talent Scholarship 2019</h3>
+                            <h4>
+                                <span class="date">July 2019 - August 2019</span>
+                                <span class="company"> Ministry of Communications and Informatics</span>
+    
+                            </h4>
+                            <p>          
+                                <!---description for digitalent-->
+                            </p>
+                        </div>                          
+                    </div>
                 </div>
         </section>
         <section class="bg-light">
@@ -271,16 +351,43 @@
                 </div>
         </section>
         <section class="bg-dark">
-                <div class="container">
+                <div class="container-1">
                     <h1>Achievement</h1>
-                    <div id="">
-                        <p>
-                                1st Place | Open Innovation 2019 <br/>
-                                April 2019 - University of Indonesia
-        
+                    <div class="timeline">
+                        <div class="event">
+                            <h3>3rd Place - Telestra Competition</h3>
+                            <h4>
+                                <span class="date">October 2017</span>
+                                <span class="company"> Telkom University</span>
+    
+                            </h4>
+                            <p>          
+                                Our Smart-Port concept brought us to the 3rd place in this competition. A Smart-Port is a concept that integrates some public transportation, mainly port with the latest technology of Internet-of-Things (IoT) like sensors, Big Data, smart devices, and data network in which expects could simplify and improve the service system, both in terms of transportation and data’s taken from import-export unload-and-loading goods, energy management, and shorten the operational cost as budget savings.
+                            </p>
+                        </div>                         
+                        <div class="event">
+                            <h3>1st Place - Open Innovation</h3>
+                            <h4>
+                                <span class="date">April 2019</span>
+                                <span class="company"> University of Indonesia</span>
+    
+                            </h4>
+                            <p>          
                                 Our hematobot platform got 1st place on Open Innovation 2019 at IMERI Faculty of Medicine Indonesia. Hematobot is a platform to recognize White Blood Cell image based on morphological classification of Acute Lymphoblastic Leukemia type L1. The prototype is built in android app and got 81% validation accuracy, while hematologist performance only got around 60-70%.
-                        </p>
-                    </div>
+                            </p>
+                        </div> 
+                        <div class="event">
+                            <h3>Honor Engineering Physics Student</h3>
+                            <h4>
+                                <span class="date">August 2019</span>
+                                <span class="company"> Faculty of Engineering - Universitas Gadjah Mada</span>
+    
+                            </h4>
+                            <p>          
+                                    Dean Faculty of Engineering gave me an award for my contribution in research and competition as Engineering Physics student.
+                            </p>
+                        </div> 
+                    </div>                    
                 </div>
         </section>
         <section class="bg-light">
