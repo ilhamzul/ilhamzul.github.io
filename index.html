@@ -230,6 +230,28 @@
                     width: 50%;
                 }
             }
+            @media screen and (max-width: 500px) {
+                #wrapper{
+                    padding-top:60px;
+                    flex-direction: column;
+                    margin:auto;
+                }
+                .container{
+                    flex-direction: column;
+                    padding:0;
+                }
+
+                .col-1{
+                    text-align: center;
+                    width: 100%;
+                    padding:0;
+                }
+                .col-2{
+                    padding:0px;
+                    margin-left:10%;
+                    margin-right:10%;
+                }
+            }
             @media screen and (max-width: 240px) {
                 .tile-image{
                 width: 100px;
@@ -266,10 +288,8 @@
                     display: block;
                     text-align: left;
                 }
-                #wrapper{
-                    padding-top:60px;
-                }
             }
+            
         </style>
 
     </head>
