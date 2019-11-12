@@ -3,7 +3,6 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <title>Ilham Zulfikri Firdaus Profile</title>
         <style>
-
             body, html { height: 100% }
             html { font-size: 100% }
             body {
@@ -14,6 +13,7 @@
                 color: #fff;
                 line-height: 24px;
                 margin:0;
+                padding:0;
                 }
 
             a:hover {
@@ -34,24 +34,7 @@
             margin: 0;
             padding: 0; 
             }
-            
-            #name {}
 
-            #photo-profile {}
-
-            header {
-                padding: 100px 10px;
-                min-height: 100vh;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-                -webkit-box-align: center;
-                -ms-flex-align: center;
-                align-items: center;
-                background: #111; }
             #wrapper {
                 min-height: 100vh;
                 justify-content: center;
@@ -145,8 +128,19 @@
 
             }
 
-            .text-center{
-                text-align: center !important;
+            .tile {
+                text-align: center;
+            }
+            .tile-image{
+                width: 150px;
+                height: 150px;
+            }
+
+            .tile-content{
+                padding:auto;
+                margin:auto;
+                float:left;
+                width: 25%;
             }
 
             <!--Navbar-->
@@ -198,6 +192,44 @@
                     float: right;
                     display: block;
                 }
+                .tile-image{
+                width: 125px;
+                height: 125px;
+                }
+
+                .tile-content{
+                    padding:auto;
+                    margin:auto;
+                    float:  left;
+                    width: 33.33%;
+                }
+            }
+
+            @media screen and (max-width: 440px) {
+                .tile-image{
+                width: 100px;
+                height: 100px;
+                }
+
+                .tile-content{
+                    padding:auto;
+                    margin:auto;
+                    float:  left;
+                    width: 50%;
+                }
+            }
+            @media screen and (max-width: 240px) {
+                .tile-image{
+                width: 100px;
+                height: 100px;
+                }
+
+                .tile-content{
+                    padding:auto;
+                    margin:auto;
+                    float:  left;
+                    width: 100%;
+                }
             }
 
             @media screen and (max-width: 660px) {
@@ -216,6 +248,9 @@
                     display: block;
                     text-align: left;
                 }
+                #wrapper{
+                    padding-top:60px;
+                }
             }
         </style>
 
@@ -223,28 +258,17 @@
     <body>
         <div id="navbar-wrapper">
             <div class="topnav" id="myTopnav">
-                <a href="#home" class="active">Home</a>
+                <a href="#" class="active">Home</a>
                 <a href="#experience">Experience</a>
                 <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
-                <a href="#anchievement">Achievement</a>
+                <a href="#achievement">Achievement</a>
                 <a href="#interest">Interest</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i><img src="./images/hamburger.png" height="25px" width="25px"></i>
                 </a>
             </div>
         </div>
-        <script>
-            function myFunction() {    
-                var x = document.getElementById("myTopnav");
-
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
-            }
-        </script>
             <div id="wrapper" >
                 <div class="container">
                     <div class="col-1">
@@ -264,6 +288,7 @@
 
         <section class="bg-light">
             <div class="container-1">
+                <div id="experience"/>
                 <h1>Experience</h1>
                 <div class="timeline">
                     <div class="event">
@@ -305,6 +330,7 @@
         </section>
         
         <section class="bg-dark">
+                <div id="education"/>
                 <div class="container-1">
                     <h1>Education</h1>
                     <div class="timeline">
@@ -335,22 +361,41 @@
                 </div>
         </section>
         <section class="bg-light">
-                <div class="container">
-                    <h1>Skills</h1>
-                    <p>
-                        - Python
-                        - R
-                        - GCP
-                        - AWS
-                        - TensorFlow
-                        - Pytorch
-                        - Tableau
-                        - Hadoop
-                        - Spark
-                    </p>
-                </div>
+            <div id="skills"/>
+            <div class="container-1">
+                <h1>Skills</h1>
+                <p>
+                    <div class="tile">
+                        <div class="tile-content">
+                            <img src="./images/python.png" alt="Python" class="tile-image"/>
+                        </div>
+                        <div class="tile-content">
+                            <img src="./images/R.png" alt="R" class="tile-image"/>
+                        </div>
+                        <div class="tile-content">
+                            <img src="./images/gcp.png" alt="Google Cloud Platform" class="tile-image"/>
+                        </div>
+                        <div class="tile-content">
+                            <img src="./images/tensorflow.png" alt="tensorflow" class="tile-image"/>
+                        </div>
+                        <div class="tile-content">
+                            <img src="./images/aws.png" alt="Amazon Web Services" class="tile-image"/>
+                        </div>
+                        <div class="tile-content">
+                            <img src="./images/tableau.png" alt="Tableau" class="tile-image"/>
+                        </div>
+                        <div class="tile-content">
+                            <img src="./images/hadoop.png" alt="Hadoop" class="tile-image"/>
+                        </div>
+                        <div class="tile-content">
+                            <img src="./images/spark.png" alt="Spark" class="tile-image"/>
+                        </div>
+                    </div>
+                </p>
+            </div>
         </section>
         <section class="bg-dark">
+                <div id="achievement"/>
                 <div class="container-1">
                     <h1>Achievement</h1>
                     <div class="timeline">
@@ -391,13 +436,21 @@
                 </div>
         </section>
         <section class="bg-light">
-                <div class="container">
+                <div id="interest"/>
+                <div class="container-1">
                     <h1>Interest</h1>
                     <p>
-                        - Music
-                        - Statistic
-                        - Artificial Intelligence
-
+                        <div class="tile">
+                            <div class="tile-content">
+                                <img src="./images/music.png" alt="Music" class="tile-image"/>
+                            </div>
+                            <div class="tile-content">
+                                <img src="./images/statistic.png" alt="Statistic" class="tile-image"/>
+                            </div>
+                            <div class="tile-content">
+                                <img src="./images/ai.png" alt="Artificial Intelligence" class="tile-image"/>
+                            </div>
+                        </div>
                     </p>
                 </div>
         </section>
@@ -406,5 +459,17 @@
                 <p>Copyright &copy; 2019 - Ilham Zulfikri Firdaus</p>
             </div>
         </footer>
+
+        <script>
+            function myFunction() {    
+                var x = document.getElementById("myTopnav");
+
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
     </body>
 </html>
